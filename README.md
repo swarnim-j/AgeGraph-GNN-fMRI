@@ -37,7 +37,7 @@ AgeGraph/
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/AgeGraph.git
+    git clone https://github.com/swarnim-j/AgeGraph.git
     cd AgeGraph
     ```
 
