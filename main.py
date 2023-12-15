@@ -139,14 +139,15 @@ for epoch in range(args.epochs):
 
     print(f"epoch: {epoch}, loss: {np.round(loss.item(), 6)}, val_acc:{np.round(val_acc, 2)}, test_acc:{np.round(test_acc, 2)}")
     val_acc_history.append(val_acc)
+    test_acc_history.append(test_acc)
 
     losses.append(loss.item())
 
 plt.plot(losses)
 plt.show()
 
-log = f"dataset, {args.dataset}, model, {args.model}, hidden, {args.hidden}, epochs, {args.epochs}, batch size, {args.batch_size}, loss, {round(np.mean(test_loss_history), 4)}, acc, {round(np.mean(test_acc_history) * 100, 2)}, std, {round(np.std(test_acc_history) * 100, 2)}"
+log = f"dataset, {args.dataset}, model, {args.model}, hidden, {args.hidden}, epochs, {args.epochs}, batch size, {args.batch_size}, loss, {round(np.mean(losses), 4)}, acc, {round(np.mean(test_acc_history) * 100, 2)}, std, {round(np.std(test_acc_history) * 100, 2)}"
 print(log)
 
-log = f"{args.dataset}, {args.model}, {args.hidden}, {args.epochs}, {args.batch_size}, {round(np.mean(test_loss_history), 4)}, {round(np.mean(test_acc_history) * 100, 2)}, {round(np.std(test_acc_history) * 100, 2)}"
+log = f"{args.dataset}, {args.model}, {args.hidden}, {args.epochs}, {args.batch_size}, {round(np.mean(losses), 4)}, {round(np.mean(test_acc_history) * 100, 2)}, {round(np.std(test_acc_history) * 100, 2)}"
 logger(log)
