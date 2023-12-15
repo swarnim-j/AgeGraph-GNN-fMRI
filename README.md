@@ -12,12 +12,14 @@ AgeGraph/
 │ └── datasets.py
 │ └── preprocess.py
 │ └── utils.py
+│
 ├── results/
 │ └── result.png
 │
 ├── .gitignore
 ├── main.py
 ├── model.py
+├── requirements.txt
 └── run_baseline.sh
 ```
 
@@ -37,7 +39,7 @@ AgeGraph/
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/AgeGraph.git
+    git clone https://github.com/swarnim-j/AgeGraph.git
     cd AgeGraph
     ```
 
